@@ -14,8 +14,7 @@ def load_vars(task):
 
 def config_ntp(task):
     ntp_template = task.run(task=template_file,name="Buildling NTP Configuration",template="ntp.j2", path="./templates")
-    task.host["ntp"] = ntp_template.result
-    ntp_output = task.host["ntp"]
+    ntp_output = ntp_template.result
     task.run(task=netconf_edit_config, target="running", config=ntp_output)
 
 
