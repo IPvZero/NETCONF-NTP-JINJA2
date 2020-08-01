@@ -1,0 +1,2 @@
+# NETCONF-NTP-JINJA2
+NETCONF Operation Replace for NTP
